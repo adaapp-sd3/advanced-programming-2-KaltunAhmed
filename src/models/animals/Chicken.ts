@@ -4,7 +4,7 @@ import Farm from "../Farm";
 class Chicken extends Animal {
   name: string = "Chicken";
   genus: string = "Chicken";
-  imgUrl: string = "/img/twtr/1f413.png";
+  imgUrl: string = "/img/ios_img/rooster_1f413.png";
   eats: string = "straw";
   hunger: number = 5;
   farm: Farm;

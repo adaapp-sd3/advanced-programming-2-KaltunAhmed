@@ -26,3 +26,35 @@
 .App-link {
   color: #61dafb;
 }
+.notFound {
+  text-align: center;
+}
+.navigator ul {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+.LoginBody {
+  position: absolute;
+  left: 45%;
+  top: 50%;
+}
+.farmerDash {
+  display: flex;
+  justify-content: left;
+  margin: 20px;
+}
+.fieldDash {
+  display: flex;
+  margin: 20px;
+}
+.currentBudget {
+  flex: 1;
+  padding: 20px;
+  background-color: aquamarine;
+  width: 100%;
+  border-radius: 5px;
+  color: grey;
+  margin: 10px;
+}

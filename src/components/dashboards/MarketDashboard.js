@@ -1,16 +1,15 @@
-import React, { Component } from "react"
+import React, { Component } from "react";
 
 class MarketDashboard extends Component {
-
   buyItem = item => {
     if (item === "seeds") {
       this.props.market.currentFarmer.myFarm.seeds.total =
         this.props.market.currentFarmer.budget *
-        this.props.market.grassSeedPrice
-      console.log(this.props.market.currentFarmer.myFarm.seeds)
-      this.props.market.currentFarmer.budget = 0
+        this.props.market.grassSeedPrice;
+      console.log(this.props.market.currentFarmer.myFarm.seeds);
+      this.props.market.currentFarmer.budget = 0;
     }
-  }
+  };
 
   render() {
     return (
@@ -38,8 +37,8 @@ class MarketDashboard extends Component {
           <dd>{this.props.market.beefPrice} per unit</dd>
         </dl>
       </div>
-    )
+    );
   }
 }
 
-export default MarketDashboard
+export default MarketDashboard;

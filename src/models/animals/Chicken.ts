@@ -25,7 +25,11 @@ class Chicken extends Animal {
       }
     }
   }
-
+  yieldEggs() {
+    let amountOfEggsToYield = 2 - this.hunger;
+    this.farm.eggs.total += Math.abs(amountOfEggsToYield);
+    this.hunger = 5;
+  }
   public preload() {
     this.p5Img = this.p5.loadImage(this.imgUrl);
     console.log(this.p5Img);

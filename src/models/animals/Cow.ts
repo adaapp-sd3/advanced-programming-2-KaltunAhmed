@@ -11,6 +11,7 @@ class Cow extends Animal {
   constructor(farm: Farm) {
     super();
     this.farm = farm;
+    console.log("before", this.farm.cows.objects.length);
   }
 
   // if cow is hungry, yield less milk
@@ -18,6 +19,10 @@ class Cow extends Animal {
     let amountOfMilkToYield = 5 - this.hunger;
     this.farm.milk.total += Math.abs(amountOfMilkToYield);
     this.hunger = 5;
+  }
+  killCow() {
+    this.farm.cows.objects.pop();
+    console.log("after", this.farm.cows.objects);
   }
 
   // if cow is thin, yield less beef
@@ -40,7 +45,7 @@ class Cow extends Animal {
 
   public preload() {
     this.p5Img = this.p5.loadImage(this.imgUrl);
-    console.log(this.p5Img);
+    //console.log(this.p5Img);
   }
 
   makeSound() {

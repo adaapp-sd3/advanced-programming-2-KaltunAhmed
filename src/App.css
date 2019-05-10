@@ -13,7 +13,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #3f61a7;
   min-height: 3rem;
   display: flex;
   flex-direction: column;
@@ -47,7 +47,8 @@
 }
 .fieldDash {
   display: flex;
-  margin: 20px;
+  justify-content: left;
+  margin: 0 auto;
 }
 .currentBudget {
   flex: 1;
@@ -57,4 +58,71 @@
   border-radius: 5px;
   color: grey;
   margin: 10px;
+}
+.currentBudget img {
+  width: 60px;
+}
+
+.totalAnimals {
+  display: flex;
+}
+.totalAnimals img {
+  margin-bottom: 10px;
+  width: 30%;
+}
+.totalAnimals img:hover {
+  width: 40%;
+}
+
+.totalAnimals p {
+  border: solid 1px lightgray;
+  border-radius: 4px;
+  margin: 0px 10px;
+}
+.products img {
+  width: 30%;
+}
+.products img:hover {
+  width: 40%;
+}
+.products {
+  display: flex;
+  margin-top: 60px;
+}
+.products p {
+  border: solid 1px lightgray;
+  border-radius: 4px;
+  margin: 10px 10px;
+}
+.buyables {
+  margin-top: 60px;
+  width: 60%;
+  margin: 30px auto;
+}
+.buyables p {
+  border: solid 1px lightgray;
+  border-radius: 4px;
+}
+.btn-warning {
+  border-radius: 5px;
+  padding: 10px;
+}
+/*field*/
+.FieldDashboard {
+  justify-content: left;
+  margin: 20px 5%;
+}
+
+.fieldContents {
+  margin-top: 60px;
+  margin: 30px auto;
+}
+
+/*Market*/
+.marketDash {
+  display: flex;
+}
+.MarketDashboard {
+  justify-content: left;
+  margin: 20px 5%;
 }

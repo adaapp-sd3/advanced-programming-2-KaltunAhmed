@@ -5,6 +5,7 @@ abstract class Animal extends ConstrainedByField {
   height = 16;
   width = 16;
   health: number = 10;
+
   move(): string {
     return "roaming the earth...";
   }

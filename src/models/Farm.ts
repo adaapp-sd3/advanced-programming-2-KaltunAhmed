@@ -3,29 +3,55 @@ import Field from "./Field";
 import Cow from "./animals/Cow";
 import Sheep from "./animals/Sheep";
 import Chicken from "./animals/Chicken";
+import Animal from "./abstract/Animal";
+import { type } from "os";
+
+type AnimalGroup<T extends Animal> = {
+  name: string;
+  total: number;
+  objects: Array<T>;
+};
+type Cows = AnimalGroup<Cow>;
+type Sheeps = AnimalGroup<Sheep>;
+type Chickens = AnimalGroup<Chicken>;
+
+type ProductGroup = {
+  name: string;
+  total: number;
+  unit: string;
+};
+type ProductGroupWithPrice = ProductGroup & { price: string };
+
+type milk = ProductGroup;
+type eggs = ProductGroup;
+type wool = ProductGroup;
+type beef = ProductGroupWithPrice;
 
 class Farm extends Drawable {
   fields: Field[] = [];
   width: number = 700;
   height: number = 710;
   cows: any;
-  sheeps: any;
-  chickens: any;
+  sheeps: Sheeps;
+  chickens: Chickens;
   straw: any;
-  milk: any;
+  milk: milk;
   seeds: any;
+  eggs: eggs;
+  wool: wool;
+  beef: beef;
   constructor(
     cows: any = {
       name: "Cows",
-      total: 2,
+      total: 3,
       objects: []
     },
-    sheeps: any = {
+    sheeps: Sheeps = {
       name: "Sheeps",
       total: 2,
       objects: []
     },
-    chickens: any = {
+    chickens: Chickens = {
       name: "Chickens",
       total: 2,
       objects: []
@@ -35,7 +61,7 @@ class Farm extends Drawable {
       total: 1000,
       unit: "bails"
     },
-    milk: any = {
+    milk: milk = {
       name: "Milk",
       total: 0,
       unit: "pints"
@@ -44,6 +70,22 @@ class Farm extends Drawable {
       name: "Grass seeds",
       total: 0,
       unit: "bunches"
+    },
+    eggs: eggs = {
+      name: "Chicken Eggs",
+      total: 0,
+      unit: " "
+    },
+    wool: wool = {
+      name: "Wool",
+      total: 0,
+      unit: "balls"
+    },
+    beef: beef = {
+      name: "Beef",
+      total: 1,
+      unit: "Kilo",
+      price: "£2"
     }
   ) {
     super();
@@ -53,6 +95,9 @@ class Farm extends Drawable {
     this.straw = straw;
     this.milk = milk;
     this.seeds = seeds;
+    this.eggs = eggs;
+    this.wool = wool;
+    this.beef = beef;
   }
 
   public preload() {

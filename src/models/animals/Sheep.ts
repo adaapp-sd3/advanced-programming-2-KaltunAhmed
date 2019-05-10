@@ -25,6 +25,10 @@ class Sheep extends Animal {
       }
     }
   }
+  yieldWool() {
+    let amountOfWoolToYield = 1;
+    this.farm.wool.total += Math.abs(amountOfWoolToYield);
+  }
 
   public preload() {
     this.p5Img = this.p5.loadImage(this.imgUrl);

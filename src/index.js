@@ -1,5 +1,4 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import ReactDOM from "react-dom";
 import { Route, BrowserRouter as Router } from "react-router-dom";
 import "./index.css";
@@ -7,7 +6,8 @@ import App from "./App";
 import login from "./login";
 import market from "./market";
 import * as serviceWorker from "./serviceWorker";
-
+import "bootstrap/dist/css/bootstrap.css";
+import ButtonGroup from "react-bootstrap/ButtonGroup";
 const routing = (
   <Router>
     <div className="navigator">

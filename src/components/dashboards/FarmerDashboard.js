@@ -19,7 +19,9 @@ class FarmerDashboard extends Component {
                 title="money"
               />
             </dt>
-            <dd>{this.props.farmer.budget}</dd>
+            <dd>
+              <h4>{this.props.farmer.budget}</h4>
+            </dd>
           </div>
 
           <div className="totalAnimals">

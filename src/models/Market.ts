@@ -14,8 +14,8 @@ class Market extends Drawable {
   milkPrice: number = 2;
   beefPrice: number = 25;
   eggPrice: number = 2;
-  chickenPrice: number = 15;
-  lambPrice: number = 20;
+  chickenMeatPrice: number = 4;
+  muttonPrice: number = 20;
   woolPrice: number = 10;
 
   greenGasPrice: number = 10;

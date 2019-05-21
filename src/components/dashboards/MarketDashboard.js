@@ -32,20 +32,124 @@ class MarketDashboard extends Component {
     }
   };
   sellMilk = item => {
+    var newBudget = this.props.market.currentFarmer.budget;
     var newProfit = this.props.market.currentFarmer.profit;
     if (
       item === "milk" &&
-      this.props.market.currentFarmer.myFarm.milk.total > 0
+      this.props.market.currentFarmer.myFarm.milk.total > 4
     ) {
       var newProfit =
         this.props.market.currentFarmer.profit + this.props.market.milkPrice;
       this.props.market.currentFarmer.profit = newProfit;
+      var newBudget =
+        this.props.market.currentFarmer.budget + this.props.market.milkPrice;
+      this.props.market.currentFarmer.budget = newBudget;
       var newPintAmount =
         this.props.market.currentFarmer.myFarm.milk.total -
         this.props.market.milkPrice * 2;
       this.props.market.currentFarmer.myFarm.milk.total = newPintAmount;
     } else {
       alert("NOT ENOUGH MILK DUDE!");
+    }
+  };
+  sellBeef = item => {
+    var newBudget = this.props.market.currentFarmer.budget;
+    var newProfit = this.props.market.currentFarmer.profit;
+    if (
+      item === "beef" &&
+      this.props.market.currentFarmer.myFarm.beef.total > 0
+    ) {
+      var newProfit =
+        this.props.market.currentFarmer.profit + this.props.market.beefPrice;
+      this.props.market.currentFarmer.profit = newProfit;
+      var newBudget =
+        this.props.market.currentFarmer.budget + this.props.market.beefPrice;
+      this.props.market.currentFarmer.budget = newBudget;
+      var newbeefAmount =
+        this.props.market.currentFarmer.myFarm.beef.total - 10;
+      this.props.market.currentFarmer.myFarm.beef.total = newbeefAmount;
+    } else {
+      alert("NOT ENOUGH BEEF DUDE!");
+    }
+  };
+  sellEggs = item => {
+    var newBudget = this.props.market.currentFarmer.budget;
+    var newProfit = this.props.market.currentFarmer.profit;
+    if (
+      item === "eggs" &&
+      this.props.market.currentFarmer.myFarm.eggs.total > 12
+    ) {
+      var newProfit =
+        this.props.market.currentFarmer.profit + this.props.market.eggPrice;
+      this.props.market.currentFarmer.profit = newProfit;
+      var newBudget =
+        this.props.market.currentFarmer.budget + this.props.market.eggPrice;
+      this.props.market.currentFarmer.budget = newBudget;
+      var newAmount = this.props.market.currentFarmer.myFarm.eggs.total - 12;
+      this.props.market.currentFarmer.myFarm.eggs.total = newAmount;
+    } else {
+      alert("NOT ENOUGH EGGS DUDE!");
+    }
+  };
+  sellChickenMeat = item => {
+    var newBudget = this.props.market.currentFarmer.budget;
+    var newProfit = this.props.market.currentFarmer.profit;
+    if (
+      item === "chickenMeat" &&
+      this.props.market.currentFarmer.myFarm.chickenMeat.total > 0
+    ) {
+      var newProfit =
+        this.props.market.currentFarmer.profit +
+        this.props.market.chickenMeatPrice;
+      this.props.market.currentFarmer.profit = newProfit;
+      var newBudget =
+        this.props.market.currentFarmer.budget +
+        this.props.market.chickenMeatPrice;
+      this.props.market.currentFarmer.budget = newBudget;
+      var newItemAmount =
+        this.props.market.currentFarmer.myFarm.chickenMeat.total - 2;
+      this.props.market.currentFarmer.myFarm.chickenMeat.total = newItemAmount;
+    } else {
+      alert("NOT ENOUGH CHICKEN DUDE!");
+    }
+  };
+  sellMutton = item => {
+    var newBudget = this.props.market.currentFarmer.budget;
+    var newProfit = this.props.market.currentFarmer.profit;
+    if (
+      item === "mutton" &&
+      this.props.market.currentFarmer.myFarm.mutton.total > 0
+    ) {
+      var newProfit =
+        this.props.market.currentFarmer.profit + this.props.market.muttonPrice;
+      this.props.market.currentFarmer.profit = newProfit;
+      var newBudget =
+        this.props.market.currentFarmer.budget + this.props.market.muttonPrice;
+      this.props.market.currentFarmer.budget = newBudget;
+      var newItemAmount =
+        this.props.market.currentFarmer.myFarm.mutton.total - 5;
+      this.props.market.currentFarmer.myFarm.mutton.total = newItemAmount;
+    } else {
+      alert("NOT ENOUGH MUTTON DUDE!");
+    }
+  };
+  sellWool = item => {
+    var newBudget = this.props.market.currentFarmer.budget;
+    var newProfit = this.props.market.currentFarmer.profit;
+    if (
+      item === "wool" &&
+      this.props.market.currentFarmer.myFarm.wool.total > 0
+    ) {
+      var newProfit =
+        this.props.market.currentFarmer.profit + this.props.market.woolPrice;
+      this.props.market.currentFarmer.profit = newProfit;
+      var newBudget =
+        this.props.market.currentFarmer.budget + this.props.market.woolPrice;
+      this.props.market.currentFarmer.budget = newBudget;
+      var newItemAmount = this.props.market.currentFarmer.myFarm.wool.total - 1;
+      this.props.market.currentFarmer.myFarm.wool.total = newItemAmount;
+    } else {
+      alert("NOT ENOUGH wool DUDE!");
     }
   };
 
@@ -117,16 +221,42 @@ class MarketDashboard extends Component {
                 </button>
               </dd>
             </div>
-            <dt>Beef</dt>
-            <dd>£{this.props.market.beefPrice} per unit</dd>
-            <dt>12 Eggs</dt>
-            <dd>£{this.props.market.eggPrice} </dd>
-            <dt>Pound of chicken</dt>
-            <dd>£{this.props.market.chickenPrice} </dd>
-            <dt>Pound of Lamb</dt>
-            <dd>£{this.props.market.lambPrice} </dd>
-            <dt>Ball of wool</dt>
-            <dd>£{this.props.market.woolPrice} </dd>
+            <div className="eggSell">
+              <dt>12 Eggs</dt>
+              <dd>
+                <button onClick={() => this.sellEggs("eggs")}>
+                  £{this.props.market.eggPrice} For 12
+                </button>
+              </dd>
+            </div>
+            <div className="woolSell">
+              <dt>Ball of wool</dt>
+              <button onClick={() => this.sellWool("wool")}>
+                £{this.props.market.woolPrice} Ball of wool
+              </button>
+            </div>
+            <div className="beefSell">
+              <dt>Beef</dt>
+              <dd>
+                <button onClick={() => this.sellBeef("beef")}>
+                  £{this.props.market.beefPrice} per unit
+                </button>
+              </dd>
+            </div>
+            <div className="muttonSell">
+              <dt>Pound of Lamb</dt>
+              <dd>
+                <button onClick={() => this.sellMutton("mutton")}>
+                  £{this.props.market.muttonPrice} for 5kg
+                </button>
+              </dd>
+            </div>
+            <div className="chickenSell">
+              <dt>Pound of chicken</dt>
+              <button onClick={() => this.sellChickenMeat("chickenMeat")}>
+                £{this.props.market.chickenMeatPrice} For whole chicken
+              </button>
+            </div>
           </dl>
         </div>
       </div>

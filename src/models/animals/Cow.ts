@@ -20,7 +20,7 @@ class Cow extends Animal {
     this.hunger = 5;
   }
   killCow() {
-    let amountOfBeefToYield = 34 * this.farm.cows.total;
+    let amountOfBeefToYield = 10 * this.farm.cows.total;
     if (this.farm.cows.objects.length > 0) {
       this.farm.cows.objects.pop();
       this.farm.cows.total = this.farm.cows.objects.length;

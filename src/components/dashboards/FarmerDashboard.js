@@ -4,6 +4,9 @@ class FarmerDashboard extends Component {
   hideUI = () => {
     this.props.farmer.showUI = false;
   };
+  showUI = () => {
+    if ((this.props.farmer.showUI = false)) this.props.farmer.showUI = true;
+  };
 
   render() {
     return (
@@ -40,7 +43,7 @@ class FarmerDashboard extends Component {
                     src={process.env.PUBLIC_URL + "img/ios_img/sheep_1f411.png"}
                     alt="sheep"
                   />
-                  <p>{this.props.farmer.myFarm.chickens.total}</p>
+                  <p>{this.props.farmer.myFarm.sheeps.total}</p>
                 </div>
                 <div className="animal3">
                   <img
@@ -57,32 +60,78 @@ class FarmerDashboard extends Component {
           {this.props.farmer.myFarm && (
             <>
               <div className="products">
-                <div className="milk">
-                  <img
-                    src={
-                      process.env.PUBLIC_URL +
-                      "img/ios_img/glass-of-milk_1f95b.png"
-                    }
-                    alt="milk"
-                  />
-                  <p>{this.props.farmer.myFarm.milk.total} pints</p>
+                <div className="nonMeats">
+                  <div className="milk">
+                    {" "}
+                    {/* milk*/}
+                    <img
+                      src={
+                        process.env.PUBLIC_URL +
+                        "img/ios_img/glass-of-milk_1f95b.png"
+                      }
+                      alt="milk"
+                    />
+                    <p>{this.props.farmer.myFarm.milk.total} pints</p>
+                  </div>
+                  <div className="Wool">
+                    {" "}
+                    {/* wool */}
+                    <img
+                      src={
+                        process.env.PUBLIC_URL +
+                        "img/ios_img/ball-of-yarn_1f9f6.png"
+                      }
+                      alt="wool"
+                    />
+                    <p> {this.props.farmer.myFarm.wool.total}</p>
+                  </div>
+                  <div className="Eggs">
+                    {" "}
+                    {/* eggs*/}
+                    <img
+                      src={process.env.PUBLIC_URL + "img/ios_img/egg_1f95a.png"}
+                      alt="Eggs"
+                    />
+                    <p>{this.props.farmer.myFarm.eggs.total}</p>
+                  </div>
                 </div>
-                <div className="Wool">
-                  <img
-                    src={
-                      process.env.PUBLIC_URL +
-                      "img/ios_img/ball-of-yarn_1f9f6.png"
-                    }
-                    alt="wool"
-                  />
-                  <p> {this.props.farmer.myFarm.wool.total}</p>
-                </div>
-                <div className="Eggs">
-                  <img
-                    src={process.env.PUBLIC_URL + "img/ios_img/egg_1f95a.png"}
-                    alt="Eggs"
-                  />
-                  <p>{this.props.farmer.myFarm.eggs.total}</p>
+                <hr />
+                <div className="meats">
+                  {" "}
+                  {/* meats*/}
+                  <div className="beef">
+                    {/* beef*/}
+                    <img
+                      src={
+                        process.env.PUBLIC_URL +
+                        "img/ios_img/cut-of-meat_1f969 (1).png"
+                      }
+                      alt="beef"
+                    />
+                    <p>{this.props.farmer.myFarm.beef.total} Kg</p>
+                  </div>
+                  <div className="mutton">
+                    {/* mutton*/}
+                    <img
+                      src={
+                        process.env.PUBLIC_URL +
+                        "img/ios_img/meat-on-bone_1f356.png"
+                      }
+                      alt="mutton"
+                    />
+                    <p>{this.props.farmer.myFarm.mutton.total} Kg</p>
+                  </div>
+                  <div className="chickenMeat">
+                    {/* chicken*/}
+                    <img
+                      src={
+                        process.env.PUBLIC_URL +
+                        "img/ios_img/poultry-leg_1f357.png"
+                      }
+                      alt="chickenMeat"
+                    />
+                    <p>{this.props.farmer.myFarm.chickenMeat.total} Kg</p>
+                  </div>
                 </div>
               </div>
               <div className="buyables">
@@ -94,7 +143,7 @@ class FarmerDashboard extends Component {
             </>
           )}
         </dl>
-        <button className="btn-warning" onClick={this.hideUI}>
+        <button className="btn-warning" onClick={this.hideUI || this.showUI}>
           Hide UI
         </button>
       </div>

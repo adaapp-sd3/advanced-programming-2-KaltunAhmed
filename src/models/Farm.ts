@@ -15,77 +15,79 @@ type Cows = AnimalGroup<Cow>;
 type Sheeps = AnimalGroup<Sheep>;
 type Chickens = AnimalGroup<Chicken>;
 
-type ProductGroup = {
-  name: string;
-  total: number;
-  unit: string;
-};
-type ProductGroupWithPrice = ProductGroup & { price: string };
-
-type milk = ProductGroup;
-type eggs = ProductGroup;
-type wool = ProductGroup;
-type beef = ProductGroupWithPrice;
-
 class Farm extends Drawable {
   fields: Field[] = [];
   width: number = 700;
   height: number = 710;
-  cows: any;
+  cows: Cows;
   sheeps: Sheeps;
   chickens: Chickens;
   straw: any;
-  milk: milk;
+  milk: any;
   seeds: any;
-  eggs: eggs;
-  wool: wool;
-  beef: beef;
+  eggs: any;
+  wool: any;
+  beef: any;
+  mutton: any;
+  chickenMeat: any;
   constructor(
     cows: any = {
       name: "Cows",
-      total: 3,
+      total: 10,
       objects: []
     },
     sheeps: Sheeps = {
       name: "Sheeps",
-      total: 2,
+      total: 10,
       objects: []
     },
     chickens: Chickens = {
       name: "Chickens",
-      total: 2,
+      total: 10,
       objects: []
     },
     straw: any = {
       name: "Straw",
-      total: 1000,
+      total: 500,
       unit: "bails"
     },
-    milk: milk = {
+    milk: any = {
       name: "Milk",
       total: 0,
       unit: "pints"
     },
     seeds: any = {
       name: "Grass seeds",
-      total: 0,
+      total: 1000,
       unit: "bunches"
     },
-    eggs: eggs = {
+    eggs: any = {
       name: "Chicken Eggs",
       total: 0,
       unit: " "
     },
-    wool: wool = {
+    wool: any = {
       name: "Wool",
       total: 0,
       unit: "balls"
     },
-    beef: beef = {
+    beef: any = {
       name: "Beef",
-      total: 1,
+      total: 0,
       unit: "Kilo",
       price: "£2"
+    },
+    mutton: any = {
+      name: "Mutton",
+      total: 1,
+      unit: "Kilo",
+      price: "£4"
+    },
+    chickenMeat: any = {
+      name: "Mutton",
+      total: 1,
+      unit: "Kilo",
+      price: "£3"
     }
   ) {
     super();
@@ -98,6 +100,8 @@ class Farm extends Drawable {
     this.eggs = eggs;
     this.wool = wool;
     this.beef = beef;
+    this.mutton = mutton;
+    this.chickenMeat = chickenMeat;
   }
 
   public preload() {

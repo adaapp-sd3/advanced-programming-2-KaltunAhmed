@@ -18,7 +18,9 @@ class FarmManager extends Component {
           ))}
         </div>
         <div className="marketDash">
-          {<MarketDashboard market={this.props.market} />}
+          {this.props.market.showUI && (
+            <MarketDashboard market={this.props.market} />
+          )}
         </div>
       </div>
     );

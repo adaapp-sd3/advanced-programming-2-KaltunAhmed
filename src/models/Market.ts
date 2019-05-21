@@ -11,7 +11,7 @@ class Market extends Drawable {
   milkDemand: number = 75;
   beefDemand: number = 75;
 
-  milkPrice: number = 1;
+  milkPrice: number = 2;
   beefPrice: number = 25;
   eggPrice: number = 2;
   chickenPrice: number = 15;
@@ -22,7 +22,9 @@ class Market extends Drawable {
 
   solarPanelPrice: number = 10000;
 
-  grassSeedPrice: number = 1;
+  grassSeedPrice: number = 10;
+
+  strawPrice: number = 10;
 
   constructor() {
     super();

@@ -6,6 +6,7 @@ class Farmer extends Drawable {
   myFarm!: Farm;
   localMarket!: Market;
   budget: number = 1000;
+  profit: number = 0;
   showUI: boolean = true;
   currentLocation: any;
   imgUrl = "/img/ios_img/tractor_1f69c.png";

@@ -183,7 +183,7 @@ class MarketDashboard extends Component {
         this.props.market.chickenMeatPrice;
       this.props.market.currentFarmer.budget = newBudget;
       var newItemAmount =
-        this.props.market.currentFarmer.myFarm.chickenMeat.total - 2;
+        this.props.market.currentFarmer.myFarm.chickenMeat.total - 4;
       this.props.market.currentFarmer.myFarm.chickenMeat.total = newItemAmount;
     } else {
       alert("NOT ENOUGH CHICKEN DUDE!");

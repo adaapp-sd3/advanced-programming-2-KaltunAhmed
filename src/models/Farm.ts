@@ -31,7 +31,7 @@ class Farm extends Drawable {
   mutton: any;
   chickenMeat: any;
   constructor(
-    cows: any = {
+    cows: Cows = {
       name: "Cows",
       total: 10,
       objects: []

@@ -1,6 +1,7 @@
 import Drawable from "./abstract/Drawable";
 import Farmer from "./Farmer";
 import Cow from "./animals/Cow";
+import Chicken from "./animals/Chicken";
 
 class Market extends Drawable {
   imgUrl = "/img/ios_img/shopping-trolley_1f6d2.png";
@@ -11,6 +12,9 @@ class Market extends Drawable {
   milkDemand: number = 75;
   beefDemand: number = 75;
 
+  cowPrice: number = 180;
+  sheepPrice: number = 100;
+  chickenPrice: number = 80;
   milkPrice: number = 2;
   beefPrice: number = 25;
   eggPrice: number = 2;

@@ -164,11 +164,32 @@
 }
 .budget {
   padding: 10px;
+  float: left;
+  margin-left: 20%;
+}
+.profit {
+  margin-top: 10px;
+  float: right;
+  margin-right: 25%;
+  margin-bottom: 10px;
+}
+.info {
+  margin-top: 20px;
 }
 .buy {
   float: left;
   margin-left: 25%;
   margin-top: 30px;
+}
+.buy button {
+  border-radius: 3px;
+  background: #353a54;
+  color: white;
+  border: 1px solid grey;
+}
+.buy button:hover {
+  background: #030719;
+  color: #9a9a9c;
 }
 .sell {
   float: right;
@@ -185,4 +206,29 @@
 }
 .sell-btn {
   padding: 5px 66px !important;
+  background: #6a83ff !important;
+  border-radius: 3px;
+  color: white;
+  border: 1px solid grey;
+  width: 200px !important;
+}
+.mgw button {
+  border-radius: 3px;
+  background: #353a54;
+  color: white;
+  border: 1px solid grey;
+}
+.mgw button:hover {
+  background: #030719;
+  color: #9a9a9c;
+}
+.bmc button {
+  border-radius: 3px;
+  background: #353a54;
+  color: white;
+  border: 1px solid grey;
+}
+.bmc button:hover {
+  background: #030719;
+  color: #9a9a9c;
 }

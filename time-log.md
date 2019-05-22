@@ -27,3 +27,8 @@ Duration: 2 hour
 ## Commit 8: Fully working market area with improved styling. Cleaning up types in farm.ts and genereal cleanup of unused code
 
 Duration: 4 hour
+
+## Commit 9: adding repositroy to netlify for continuouse deployment
+
+Duration: 15 mins
+My work deployed [Kaltun's Farm](https://wizardly-mahavira-3f0042.netlify.com/).
